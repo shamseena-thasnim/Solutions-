@@ -1,0 +1,15 @@
+Flip Machine public static int getMinimumOperations(String binary)
+{ 
+int count = 0; 
+int step = 0; 
+for ( int i = 0 ; i < binary.length(); i++ )
+{ 
+if ( binary.charAt(i) == '1' )
+count++; 
+if ( binary.charAt(i) == '0' && count > 0 )
+{ 
+step++; count--; 
+} 
+} 
+return step;
+}
